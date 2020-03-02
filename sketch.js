@@ -8,9 +8,9 @@ function setup() {
 
 function draw() {
   background(220);
-  p1.show();
+  p.show();
   pManager.show();
-  if(p1.shooting){
-  p1.shoot(mouseX, mouseY);
+  if(p.shooting){
+  p.shoot(mouseX, mouseY);
   }
 }
