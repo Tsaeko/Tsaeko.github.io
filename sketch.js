@@ -14,3 +14,11 @@ function draw() {
   p.shoot(mouseX, mouseY);
   }
 }
+
+function mousePressed() {
+  p1.shooting=true;
+  
+}
+function mouseReleased(){
+  p1.shooting=false;
+}
