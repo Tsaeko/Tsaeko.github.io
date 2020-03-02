@@ -16,9 +16,9 @@ function draw() {
 }
 
 function mousePressed() {
-  p1.shooting=true;
+  p.shooting=true;
   
 }
 function mouseReleased(){
-  p1.shooting=false;
+  p.shooting=false;
 }
