@@ -2,7 +2,7 @@ let p;
 
 function setup() {
   createCanvas(400, 400);
-  p = new player();
+  p = new Player();
   pManager= new ProjManager();
 }
 
