@@ -33,15 +33,17 @@ class PlayerInfo {
   constructor(player){
     this.player=player;
     this.pos =createVector(40,10);
+    this.textDelta=10;
   }
 
   show(){
     let x= this.pos.x;
     let y= this.pos.y;
     let pl =this.player;
-    text("HP: "+pl.hp,x,y+10);
-    text("Projectiles: "+pl.projCount,x,y+20);
-    text("Accuracy: "+(100-pl.angle)+"%",x,y+30);
+    let textDelta= this.textDelta;
+    text("HP: "+pl.hp,x,y+textDelta);
+    text("Projectiles: "+pl.projCount,x,y+textDelta*2);
+    text("Accuracy: "+(100-pl.angle)+"%",x,y+textDelta*3);
 }
 
 }
