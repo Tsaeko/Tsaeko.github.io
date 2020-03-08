@@ -40,7 +40,8 @@ class PlayerInfo {
     let y= this.pos.y;
     let pl =this.player;
     text("HP: "+pl.hp,x,y+10);
-    text("Projectiles: ",x,y+20);
+    text("Projectiles: "+pl.projCount,x,y+20);
+    text("Accuracy: "+(100-pl.angle)+"%",x,y+30);
 }
 
 }
