@@ -7,6 +7,7 @@
     }
     show() {
       for (let proj of this.projs) {
+        stroke(0,50);
         proj.show();
         proj.move();
       }
