@@ -22,6 +22,7 @@ class Player {
     }
   }
   show() {
+    stroke(255);
     circle(this.pos.x, this.pos.y, this.size);
     this.info.show();
   }
@@ -44,6 +45,7 @@ class PlayerInfo {
     text("HP: "+pl.hp,x,y+textDelta);
     text("Projectiles: "+pl.projCount,x,y+textDelta*2);
     text("Accuracy: "+(100-pl.angle)+"%",x,y+textDelta*3);
+    text("Position: ("+x+","+y+")",x,y+textDelta*4);
 }
 
 }
