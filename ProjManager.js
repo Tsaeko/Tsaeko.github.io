@@ -8,7 +8,7 @@
     show() {
       let discardList=[];
       for (let proj of this.projs) {
-        stroke(0,50);
+
         proj.show();
         proj.move();
         if(proj.pos.x < 0 || proj.pos.x>width|| proj.pos.y<0 || proj.pos.y>height){

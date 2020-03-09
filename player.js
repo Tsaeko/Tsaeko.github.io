@@ -9,20 +9,22 @@ class Player {
     this.info = new PlayerInfo(this);
   }
   shoot() {
-    let minSpray = 1 - (this.angle / 100);
-    let maxSpray = 1 + (this.angle / 100);
+    // while mousePressed, shoot projCount projectiles every frame with angle deviation (spray)
+
 
     for (let pCounter = 0; pCounter < this.projCount; pCounter++) {
-      let spray = random(minSpray, maxSpray);
-      let dir = createVector(mouseX, mouseY);
-      dir.mult(spray, spray);
 
-      pManager.add(this, dir.x, dir.y);
+
+
+      let newDir = createVector(mouseX, mouseY).sub(p.pos.x, p.pos.y);
+      newDir = newDir.rotate(radians(random(-this.angle,this.angle)));
+
+      pManager.add(this, this.pos.x + newDir.x, this.pos.y + newDir.y);
 
     }
   }
   show() {
-    stroke(255);
+    stroke(0);
     circle(this.pos.x, this.pos.y, this.size);
     this.info.show();
   }
@@ -31,21 +33,21 @@ class Player {
 
 class PlayerInfo {
 
-  constructor(player){
-    this.player=player;
-    this.pos =createVector(40,10);
-    this.textDelta=10;
+  constructor(player) {
+    this.player = player;
+    this.pos = createVector(40, 10);
+    this.textDelta = 10;
   }
 
-  show(){
-    let x= this.pos.x;
-    let y= this.pos.y;
-    let pl =this.player;
-    let textDelta= this.textDelta;
-    text("HP: "+pl.hp,x,y+textDelta);
-    text("Projectiles: "+pl.projCount,x,y+textDelta*2);
-    text("Accuracy: "+(100-pl.angle)+"%",x,y+textDelta*3);
-    text("Position: ("+x+","+y+")",x,y+textDelta*4);
-}
+  show() {
+    let x = this.pos.x;
+    let y = this.pos.y;
+    let pl = this.player;
+    let textDelta = this.textDelta;
+    text("HP: " + pl.hp, x, y + textDelta);
+    text("Projectiles: " + pl.projCount, x, y + textDelta * 2);
+    text("Accuracy: " + (100 - pl.angle) + "%", x, y + textDelta * 3);
+    text("Position: (" + x + "," + y + ")", x, y + textDelta * 4);
+  }
 
 }

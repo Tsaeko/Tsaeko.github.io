@@ -6,7 +6,8 @@
      this.dir = target.sub(this.pos);
    }
    show() {
-
+     stroke(0,15);
+     fill(0,15);
      circle(this.pos.x, this.pos.y, 10);
    }
    move() {
