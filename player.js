@@ -47,9 +47,9 @@ class PlayerInfo {
     let textDelta = this.textDelta;
     text("HP: " + pl.hp, x, y + textDelta);
     text("Projectiles: " + pl.projCount, x, y + textDelta * 2);
-    text("ProjectileSpeed: " + pl.projCount, x, y + textDelta * 2);
-    text("Accuracy: " + (100 - pl.angle) + "%", x, y + textDelta * 3);
-    text("Position: (" + x + "," + y + ")", x, y + textDelta * 4);
+    text("ProjectileSpeed: " + pl.projSpeed, x, y + textDelta * 3);
+    text("Accuracy: " + (100 - pl.angle) + "%", x, y + textDelta * 4);
+    text("Position: (" + x + "," + y + ")", x, y + textDelta * 5);
   }
 
 }
