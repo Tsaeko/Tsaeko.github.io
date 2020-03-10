@@ -2,7 +2,7 @@ class Player {
   constructor() {
     this.pos = createVector(width / 2, height / 2);
     this.projCount = 5;
-    this.projSpeed = 1.2;
+    this.projSpeed = 3.2;
     this.angle = 40;
     this.shooting = false;
     this.hp = 100;
@@ -14,8 +14,6 @@ class Player {
 
 
     for (let pCounter = 0; pCounter < this.projCount; pCounter++) {
-
-
 
       let newDir = createVector(mouseX, mouseY).sub(p.pos.x, p.pos.y);
       newDir = newDir.rotate(radians(random(-this.angle,this.angle)));
