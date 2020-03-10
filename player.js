@@ -2,6 +2,7 @@ class Player {
   constructor() {
     this.pos = createVector(width / 2, height / 2);
     this.projCount = 5;
+    this.projSpeed = 1.2;
     this.angle = 40;
     this.shooting = false;
     this.hp = 100;
@@ -46,6 +47,7 @@ class PlayerInfo {
     let textDelta = this.textDelta;
     text("HP: " + pl.hp, x, y + textDelta);
     text("Projectiles: " + pl.projCount, x, y + textDelta * 2);
+    text("ProjectileSpeed: " + pl.projCount, x, y + textDelta * 2);
     text("Accuracy: " + (100 - pl.angle) + "%", x, y + textDelta * 3);
     text("Position: (" + x + "," + y + ")", x, y + textDelta * 4);
   }

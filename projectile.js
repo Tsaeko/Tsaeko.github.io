@@ -2,7 +2,7 @@
    constructor(source, target) {
      this.source = source;
      this.pos = createVector(source.pos.x, source.pos.y);
-
+     this.speed=source.projSpeed;
      this.dir = target.sub(this.pos);
    }
    show() {
@@ -12,6 +12,7 @@
    }
    move() {
      this.dir.normalize();
+     this.dir.mult(this.speed,this.speed);
      this.pos.add(this.dir);
    }
  }
