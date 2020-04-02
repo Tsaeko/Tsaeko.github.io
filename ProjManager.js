@@ -34,6 +34,8 @@
           if(dx+dy< en.size){
             en.hp-=1;
             collideList.push(proj);
+           fill(0,0,255,50);
+          circle(en.pos.x,en.pos.y,en.size*2);
           }
         }
 
@@ -45,6 +47,8 @@
         if(dx+dy< p.size){
           p.hp-=1;
           collideList.push(proj);
+          fill(255,0,0,50);
+          circle(p.pos.x,p.pos.y,p.size*2);
         }
        }
      }

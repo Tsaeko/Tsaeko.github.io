@@ -24,6 +24,7 @@ class Player {
   }
   show() {
     stroke(0);
+    fill(0,255,0);
     circle(this.pos.x, this.pos.y, this.size);
     this.info.show();
   }

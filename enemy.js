@@ -39,6 +39,7 @@ class Enemy {
     }
 
     show() {
+        fill(255,0,0);
         circle(this.pos.x, this.pos.y, this.size);
 
         if (frameCount % 30 == 0) {
